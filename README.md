@@ -8,7 +8,7 @@ Entry for the [One-Line Laugh-Off](https://make.fun/bounty/u-zkhiel-one-line-lau
 
 ## How it works
 
-`main.ts` assembles a single joke from two beats — the setup and the punch — and writes it verbatim to `/output/entry.txt`. The design keeps the joke text fixed while the assembly is structured, so the output is deterministic: every run produces byte-identical output.
+`main.ts` builds the line from an ordered fragment table (`BEATS`: subject, failure, consequence) joined by `assemble()` with the line's exact punctuation, and writes it verbatim to `/output/entry.txt`. The text is fixed and the assembly is purely structural, so the output is deterministic: every run produces byte-identical output.
 
 Run it with:
 
